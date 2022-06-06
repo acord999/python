@@ -15,6 +15,7 @@ def currency_rates(code):
 
 # Тестирую функцию
 if __name__ == '__main__':
-    print(currency_rates('GBP'))
+    print(currency_rates('USD'))
+    print(currency_rates('EUR'))
     print(type(currency_rates('USD')))
     print(currency_rates('net takoi valuty'))
