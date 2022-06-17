@@ -1,5 +1,8 @@
 def val_checker(val_func):
+    from functools import wraps
+
     def decorate(func):
+        @wraps(func)
         def result(x):
             if val_func(x):
                 return func(x)
@@ -18,5 +21,6 @@ def calc_cube(n):
 
 
 if __name__ == '__main__':
-    a = calc_cube(2)
+    a = calc_cube(5)
     print(a)
+    print(calc_cube.__name__)
