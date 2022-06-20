@@ -62,41 +62,17 @@ class PoliceCar(Car):
 
 
 if __name__ == '__main__':
-    # Тест класса Car
     simple_car = Car('Audi', 'Red')
-    simple_car.go()
-    simple_car.stop()
-    simple_car.turn('направо')
-    simple_car.speed = 100
-    simple_car.show_speed()
-    print('#' * 70)
-    # Тест класса TownCar
     t_car = TownCar('Эвакуатор', 'White')
-    t_car.go()
-    t_car.stop()
-    t_car.turn('направо')
-    t_car.speed = 75
-    t_car.show_speed()
-    print('#' * 70)
-    # Тест класса Car
     sport = Car('Ferrari', 'Yellow')
-    sport.go()
-    sport.stop()
-    sport.turn('направо')
-    sport.speed = 175
-    sport.show_speed()
-    print('#' * 70)
-    # Тест класса WorkCar
-    w_car = TownCar('Трактор', 'Blue')
-    w_car.go()
-    w_car.stop()
-    w_car.turn('направо')
-    w_car.speed = 50
-    w_car.show_speed()
-    print('#' * 70)
+    w_car = WorkCar('Трактор', 'Blue')
     police = Car('Полицейский Ford', 'Red')
-    police.go()
-    police.stop()
-    police.turn('направо')
-    police.speed = 60
-    police.show_speed()
+    objects = [simple_car, t_car, sport, w_car, police]
+    for car_obj in objects:
+        car_obj.go()
+        car_obj.stop()
+        car_obj.turn('направо')
+        car_obj.speed = 100
+        car_obj.show_speed()
+        print('#' * 70)
+

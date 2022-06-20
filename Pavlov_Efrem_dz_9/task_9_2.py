@@ -12,4 +12,4 @@ class Road:
 
 if __name__ == '__main__':
     r = Road(5000, 20)
-    print(r.total_weight(25, 5))
+    print(f'{r.total_weight(25, 5) / 1000} т')

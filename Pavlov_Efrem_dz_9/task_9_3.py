@@ -19,7 +19,7 @@ class Position(Worker):
         return f'{self.name} {self.surname}'
 
     def get_total_income(self):
-        return self._income['wage'] + self._income['bonus']
+        return self._income.get('wage') + self._income.get('bonus', 0)
 
 
 if __name__ == '__main__':
